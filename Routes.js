@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import News from "./src/News"
 import Portofolio from "./src/Portofolio";
 import Budaya from "./src/Budaya";
+import testGesture from './src/testGesture';
 const Project= createStackNavigator({
   News: {
    screen: News
@@ -13,6 +14,9 @@ const Project= createStackNavigator({
   },
   Budaya: {
     screen: Budaya
+  },
+  testGesture: {
+    screen: testGesture
   }
 });
 export default createAppContainer(Project);

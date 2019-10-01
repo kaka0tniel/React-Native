@@ -12,16 +12,16 @@ class News extends React.Component {
   };
 
   render() {
-    
+
 
     // this is a more complex example using async/await and basic auth
     (async () => {
       // log in to our API with a user/pass
       try {
         // make the request
-        
-        
-        
+
+
+
       } catch (err) {
         console.error(err);
       }
@@ -85,8 +85,11 @@ class News extends React.Component {
           </Card>
 
           <Button title="Go to Budaya Page"
-                        onPress={() => this.props.navigation.navigate('Budaya')}
-                    />
+            onPress={() => this.props.navigation.navigate('Budaya')}
+          />
+          <Button title="Go To Test Swipe Gesture"
+            onPress={() => this.props.navigation.navigate('testGesture')}
+          />
         </ScrollView >
       </SafeAreaView>
     );
