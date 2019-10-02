@@ -3,7 +3,7 @@ import { Text, SafeAreaView, ScrollView, StyleSheet, Image } from 'react-native'
 import { grey } from 'ansi-colors';
 import { Button, ThemeProvider, Card } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/dist/EvilIcons';
-import api from '../testFrisbee';
+import api from '../../testFrisbee';
 // import axiosApi from './testAxios';
 import Icon2 from 'react-native-vector-icons/dist/Feather';
 class News extends React.Component {
@@ -74,7 +74,7 @@ class News extends React.Component {
 
           <Card
             title='Baca Juga'
-            image={require('../images/foto.jpeg')}>
+            image={require('../../images/foto.jpeg')}>
             <Text style={{ marginBottom: 10 }}>
               I am passionate about software engineer. I am comfortable working in...
     </Text>
@@ -89,6 +89,9 @@ class News extends React.Component {
           />
           <Button title="Go To Test Swipe Gesture"
             onPress={() => this.props.navigation.navigate('testGesture')}
+          />
+          <Button title="Go To Home"
+                    onPress={() => this.props.navigation.navigate('Home')}
           />
         </ScrollView >
       </SafeAreaView>

@@ -12,7 +12,7 @@ class Portofolio extends React.Component {
         return (
             <SafeAreaView style={styles.container}>
                 <ScrollView style={styles.baseText}>
-                    <Image source={require('../images/foto.jpeg')} style={styles.imageSize} ></Image>
+                    <Image source={require('../../images/foto.jpeg')} style={styles.imageSize} ></Image>
                     <Card>
                         <Text style={{ fontSize: 20, paddingBottom: 15, fontWeight: 'bold' }}>
                             Tentang
