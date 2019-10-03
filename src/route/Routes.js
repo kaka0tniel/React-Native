@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import { createStackNavigator, creat } from 'react-navigation-stack'
 import News from '../component/News'
@@ -9,6 +9,7 @@ import List from "../component/List";
 import { createDrawerNavigator } from 'react-navigation-drawer';
 // import { createAppContainer } from 'react-navigation';
 import Budaya from "../component/Budaya";
+import Introduction from "../component/Introduction";
 import testGesture from '../component/testGesture';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { createBottomTabNavigator, createMaterialTopTabNavigator } from 'react-navigation-tabs';
@@ -42,6 +43,7 @@ const TabNavigation = createMaterialTopTabNavigator({
   Home: Dashboard,
   Setting: Setting
 });
+
 
 const tabBotomNavigation = createMaterialBottomTabNavigator({
   Home: {
@@ -80,6 +82,10 @@ const tabBotomNavigation = createMaterialBottomTabNavigator({
     barStyle: { backgroundColor: '#ffffff' },
   });
 
+const AppNavigation = createSwitchNavigator({
+Introduction: Introduction,
+Home: tabBotomNavigation
+});
 
 // const Drawer = createDrawerNavigator({
 //   Home: Home,
@@ -87,4 +93,4 @@ const tabBotomNavigation = createMaterialBottomTabNavigator({
 // });
 
 // export default createAppContainer(Drawer);
-export default createAppContainer(tabBotomNavigation);
+export default createAppContainer(AppNavigation);
